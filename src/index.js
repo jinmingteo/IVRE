@@ -24,12 +24,12 @@ import store from "./store";
 // CHANGE HERE
 
 var config = {
-  apiKey: "AIzaSyB1UnzuQoOIG7T6AgTe9IWpIlKLKrT6vqw",
-  authDomain: "week-6-bt3103.firebaseapp.com",
-  databaseURL: "https://week-6-bt3103.firebaseio.com",
-  projectId: "week-6-bt3103",
-  storageBucket: "week-6-bt3103.appspot.com",
-  messagingSenderId: "215589390545"
+    apiKey: "AIzaSyB25jkNH3gfUookjihh_C8wAGUJGNpeelI",
+    authDomain: "ivre-6cd52.firebaseapp.com",
+    databaseURL: "https://ivre-6cd52.firebaseio.com",
+    projectId: "ivre-6cd52",
+    storageBucket: "ivre-6cd52.appspot.com",
+    messagingSenderId: "349652609210"
 };
 
 try {
