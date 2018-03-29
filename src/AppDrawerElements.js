@@ -10,6 +10,17 @@ import StarIcon from 'material-ui-icons/Star'
 
 export const DrawerMenuItems = (
   <div>
+  <Divider />
+    <List>
+      <Link className="linkStyle" to="/charts">
+      <ListItem button>
+      <ListItemIcon>
+      <StarIcon />
+      </ListItemIcon>
+      <ListItemText primary="Charts" />
+      </ListItem>
+      </Link>
+    </List>
     <Divider />
     <List>
       <Link className="linkStyle" to="/recharts">

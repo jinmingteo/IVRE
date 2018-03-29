@@ -45,6 +45,14 @@ db.ref("/").on("value", data => {
   }
 });
 
+db.ref("/newCharts").on("value", data => {
+  if (data.val()) {
+    store.dispatch({ type: "SET_VAL", payload: data.val() });
+    console.log("dispatched & displaying getstate:");
+    console.log(store.getState());
+  }
+});
+
 render(
   <BrowserRouter>
     <Provider store={store}>
