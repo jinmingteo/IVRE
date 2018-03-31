@@ -7,7 +7,7 @@ class App extends React.Component{
     return(
       <div>
       <AppFrame>
-      Home route 
+      Welcome to IVRE 
       </AppFrame>
       </div>
     )
