@@ -1,5 +1,5 @@
 import React from 'react';
-import { compose } from 'redux';
+//import { compose } from 'redux';
 import { connect } from 'react-redux';
 import VictoryComp from './VictoryChart.js';
 
@@ -14,7 +14,7 @@ class VictoryChartComp extends React.Component{
       for(var key in this.props.newCharts){
       //  console.log('within loop')
       //  console.log(key, props.newCharts[key])
-        if (this.props.newCharts[key].style =='victory')
+        if (this.props.newCharts[key].style ==='victory')
       {this.chartsArr[ind]=this.props.newCharts[key]
       ind=ind+1
       }
@@ -24,11 +24,11 @@ class VictoryChartComp extends React.Component{
   }
 
   componentWillReceiveProps(newProps) {
-    if (newProps != this.props) {
+    if (newProps !== this.props) {
       this.props = newProps
       var ind = 0
       for (var key in this.props.newCharts) {
-        if (this.props.newCharts[key].style == 'victory') {
+        if (this.props.newCharts[key].style === 'victory') {
           this.chartsArr[ind] = this.props.newCharts[key]
           ind = ind + 1
         }
@@ -52,7 +52,7 @@ const mapStateToProps = state => {
   return { newCharts: state.val }
 }
 
-const mapDispatchToProps = dispatch => { }
+//const mapDispatchToProps = dispatch => { }
 
 
 const Victory = connect(

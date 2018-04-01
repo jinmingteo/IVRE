@@ -1,26 +1,24 @@
 import React from 'react';
-//import { compose } from 'redux';
 import { connect } from 'react-redux';
-import RechartsComp from './RechartsChart.js';
+//import stuRecharts from './stuRecharts.js';
+import Recharts from './RechartsChart.js';
 
-class RechartsChartComp extends React.Component{
-  constructor(props) {
+class ExampleComponent extends React.Component {
+     constructor(props) {
       super(props);
       //this.state = this.props
       this.chartsArr = [];
-    //  console.log('Props-')
-    //  console.log(this.props.newCharts)
+      //console.log('Props-')
+      // console.log("hi");
+      console.log(this.props.newCharts);
       var ind=0
       for(var key in props.newCharts){
-        console.log('within loop')
-        //console.log(key, props.newCharts[key])
-//      if(this.props.newCharts[key].style =='recharts')
+      console.log('within loop')
+      console.log(key, props.newCharts[key])
+      if(this.props.newCharts[key].style ==='recharts')
       this.chartsArr[ind]=this.props.newCharts[key]
       ind=ind+1
-      
-      
       }
-
   }
 
   componentWillReceiveProps(newProps) {
@@ -29,18 +27,23 @@ class RechartsChartComp extends React.Component{
       var ind = 0
       for (var key in this.props.newCharts) {
         if (this.props.newCharts[key].style === 'recharts') {
-        this.chartsArr[ind] = this.props.newCharts[key]
+          this.chartsArr[ind] = this.props.newCharts[key]
           ind = ind + 1
         }
       }
     }
   }
+  
+  componentDidMount(){
+    console.log("mounted");
+  }
+
   render(){
     return(
       <div>{
         this.chartsArr.map(function(chart, index){
           // Adding each chart from passed in data. 
-          return <RechartsComp key={index} charts={chart} />;
+          return <Recharts key={index} charts={chart} />;
         })
       }</div>
     )
@@ -48,14 +51,10 @@ class RechartsChartComp extends React.Component{
 }
 
 const mapStateToProps = state => {
-  return { newCharts: state.val }
+  return {newCharts: state.stuVal};
 }
 
 //const mapDispatchToProps = dispatch => { }
 
 
-const Recharts = connect(
-  mapStateToProps,
-)(RechartsChartComp)
-
-export default Recharts;
+export default connect(mapStateToProps)(ExampleComponent);

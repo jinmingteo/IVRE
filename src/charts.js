@@ -13,4 +13,4 @@ class charts extends React.Component{
   }
 }
 
-export default  charts;
+export default charts;

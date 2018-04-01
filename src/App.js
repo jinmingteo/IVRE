@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from 'react-dom';
+//import { render } from 'react-dom';
 import AppFrame from './AppFrame'
 
 class App extends React.Component{
@@ -7,7 +7,7 @@ class App extends React.Component{
     return(
       <div>
       <AppFrame>
-      Welcome to IVRE 
+      <h1> Welcome to IVRE </h1>
       </AppFrame>
       </div>
     )

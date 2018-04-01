@@ -1,10 +1,10 @@
 import React from 'react';
-import * as V from 'victory';
+//import * as V from 'victory';
 import { VictoryChart, VictoryBar, VictoryTheme, VictoryAxis, VictoryStack, VictoryLine, VictoryPie } from 'victory';
 //import {range} from 'react-math';
 import AppFrame from './AppFrame'
-import {compose} from 'redux'
-import {connect} from 'react-redux'
+//import {compose} from 'redux'
+//import {connect} from 'react-redux'
 const data2012 = [
     {quarter: 1, earnings: 13000},
       {quarter: 2, earnings: 16500},
@@ -36,7 +36,7 @@ const data2015 = [
 class VictoryComp extends React.Component {
   render() {
   console.log(this.props)
-    if(this.props.charts.chartType=='line'){
+    if(this.props.charts.chartType ==='line'){
       return (
         <div>
         <AppFrame>
@@ -56,7 +56,7 @@ class VictoryComp extends React.Component {
       )
     }
     
-    if(this.props.charts.chartType=='pie'){
+    if(this.props.charts.chartType==='pie'){
       return(
         <div>
         <AppFrame>
@@ -70,7 +70,7 @@ class VictoryComp extends React.Component {
       )
     }
 
-    if (this.props.charts.chartType == 'bar') {
+    if (this.props.charts.chartType === 'bar') {
       return (
         <div>
           <AppFrame>

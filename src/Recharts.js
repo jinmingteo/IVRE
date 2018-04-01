@@ -1,7 +1,7 @@
 import React from "react";
-import { render } from "react-dom";
+//import { render } from "react-dom";
 import AppFrame from "./AppFrame";
-import Dashboard from "react-dazzle";
+//import Dashboard from "react-dazzle";
 import {
   PieChart,
   Pie,
@@ -10,12 +10,12 @@ import {
   XAxis,
   YAxis,
   CartesianGrid,
-  BarChart,
+  //BarChart,
   Tooltip,
   Legend
 } from "recharts";
-import Victory from "./Victory";
-import { compose } from "redux";
+//import Victory from "./Victory";
+//import { compose } from "redux";
 import { connect } from "react-redux";
 
 class RechartsComp extends React.Component {
@@ -62,7 +62,7 @@ const mapStateToProps = state => {
   return { charts: state.val };
 };
 
-const mapDispatchToProps = dispatch => {};
+//const mapDispatchToProps = dispatch => {};
 
 const Recharts = connect(mapStateToProps)(RechartsComp);
 

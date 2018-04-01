@@ -21,6 +21,16 @@ export const DrawerMenuItems = (
       </ListItem>
       </Link>
     </List>
+    <List>
+      <Link className="linkStyle" to="/studentCharts">
+      <ListItem button>
+      <ListItemIcon>
+      <StarIcon />
+      </ListItemIcon>
+      <ListItemText primary="stuCharts" />
+      </ListItem>
+      </Link>
+    </List>
     <Divider />
     <List>
       <Link className="linkStyle" to="/recharts">

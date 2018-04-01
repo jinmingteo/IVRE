@@ -3,21 +3,21 @@ import { render } from "react-dom";
 import { BrowserRouter } from "react-router-dom";
 import Root from "./Router";
 import firebase from "firebase";
-import AppFrame from "./AppFrame";
-import Dashboard from "react-dazzle";
-import {
-  PieChart,
-  Pie,
-  LineChart,
-  Line,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  BarChart,
-  Tooltip,
-  Legend
-} from "recharts";
-import Victory from "./Victory";
+//import AppFrame from "./AppFrame";
+//import Dashboard from "react-dazzle";
+//import {
+  //PieChart,
+  //Pie,
+  //LineChart,
+  //Line,
+  //XAxis,
+  //YAxis,
+  //CartesianGrid,
+  //BarChart,
+  //Tooltip,
+  //Legend
+//} from "recharts";
+//import Victory from "./Victory";
 import { Provider } from "react-redux";
 import store from "./store";
 //const {XAxis, YAxis, CartesianGrid, Tooltip, Legend} = Recharts;
@@ -40,8 +40,8 @@ var db = firebase.database();
 db.ref("/").on("value", data => {
   if (data.val()) {
     store.dispatch({ type: "SET_VAL", payload: data.val() });
-    //  console.log('dispatched & displaying getstate:')
-    //  console.log(store.getState());
+    console.log('dispatched & displaying getstate:')
+    console.log(store.getState());
   }
 });
 
@@ -49,6 +49,14 @@ db.ref("/newCharts").on("value", data => {
   if (data.val()) {
     store.dispatch({ type: "SET_VAL", payload: data.val() });
     console.log("dispatched & displaying getstate:");
+    console.log(store.getState());
+  }
+});
+
+db.ref("/stuCharts").on("value", data => {
+  if (data.val()) {
+    store.dispatch({ type: "SET_STU_VAL", payload: data.val() });
+    console.log("student dispatched & displaying getstate:");
     console.log(store.getState());
   }
 });
@@ -61,5 +69,7 @@ render(
   </BrowserRouter>,
   document.getElementById("root")
 );
+
+//provider let CONTAINERS connect to the store....
 
 //render(<App />, document.getElementById('root'));

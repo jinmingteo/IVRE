@@ -1,5 +1,5 @@
 import React from "react";
-import * as V from "victory";
+//import * as V from "victory";
 import {
   VictoryChart,
   VictoryBar,
@@ -9,7 +9,7 @@ import {
 } from "victory";
 //import { range } from "react-math";
 import AppFrame from "./AppFrame";
-import { compose } from "redux";
+//import { compose } from "redux";
 import { connect } from "react-redux";
 
 class VictoryComp extends React.Component {
@@ -56,7 +56,7 @@ const mapStateToProps = state => {
   return { charts: state.val };
 };
 
-const mapDispatchToProps = dispatch => {};
+//const mapDispatchToProps = dispatch => {};
 
 const Victory = connect(mapStateToProps)(VictoryComp);
 
