@@ -1,18 +1,14 @@
 import React from 'react';
-//import Victory from './VictoryChartComp';
-//victory
-//import reChart from './stuRechartsChart';
-//import RechartsChartComp from './RechartsChartComp';
-import Example123 from './stuBuilder';
-//<Recharts />
-class studentCharts extends React.Component{
+import Rechartsz from './StuBuilder';
+
+class StudentCharts extends React.Component{
   render(){
     return (
       <div>
-      <Example123 />
+      <Rechartsz />
       </div>
     );
   }
 }
 
-export default studentCharts;
+export default StudentCharts;

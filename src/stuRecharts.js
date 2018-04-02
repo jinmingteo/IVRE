@@ -44,7 +44,7 @@ const AxisLabel = ({
   );
 };
 
-export default class stuRecharts extends React.Component {
+export default class StuRecharts extends React.Component {
   render() {
     console.log("Props within Recharts:");
     console.log(this.props);

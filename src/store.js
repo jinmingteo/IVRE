@@ -15,11 +15,23 @@ const reducer = (state = {}, action) => {
       val: action.payload
       };
 
+case 'SET_ADMIN_VAL':
+    return {
+      ...state,
+      adminVal: action.payload
+      };
+
   case 'SET_STU_VAL':
   	return {
   		...state,
   		stuVal: action.payload
   		};
+
+  case 'SET_INST_VAL':
+    return {
+      ...state,
+      instVal: action.payload
+      };
             
 // Handle other actions here
 default:

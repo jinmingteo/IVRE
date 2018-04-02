@@ -12,59 +12,38 @@ export const DrawerMenuItems = (
   <div>
   <Divider />
     <List>
-      <Link className="linkStyle" to="/charts">
+      <Link className="linkStyle" to="/adminCharts">
       <ListItem button>
       <ListItemIcon>
       <StarIcon />
       </ListItemIcon>
-      <ListItemText primary="Charts" />
+      <ListItemText primary="Admin Charts" />
       </ListItem>
       </Link>
     </List>
+  <Divider />
+    <List>
+      <Link className="linkStyle" to="/instructorCharts">
+      <ListItem button>
+      <ListItemIcon>
+      <StarIcon />
+      </ListItemIcon>
+      <ListItemText primary="Instructor Charts" />
+      </ListItem>
+      </Link>
+    </List>
+    <Divider />
     <List>
       <Link className="linkStyle" to="/studentCharts">
       <ListItem button>
       <ListItemIcon>
       <StarIcon />
       </ListItemIcon>
-      <ListItemText primary="stuCharts" />
+      <ListItemText primary="Student Charts" />
       </ListItem>
       </Link>
     </List>
     <Divider />
-    <List>
-      <Link className="linkStyle" to="/recharts">
-      <ListItem button>
-      <ListItemIcon>
-      <StarIcon />
-      </ListItemIcon>
-      <ListItemText primary="ReCharts" />
-      </ListItem>
-      </Link>
-      <Link className="linkStyle" to="/victory">
-      <ListItem button>
-      <ListItemIcon>
-      <StarIcon />
-      </ListItemIcon>
-      <ListItemText primary="Victory" />
-      </ListItem>
-      </Link>
-    </List>
-    <Divider />
-    <List>
-      <ListItem button>
-        <ListItemIcon>
-          <StarIcon />
-        </ListItemIcon>
-        <ListItemText primary="Profile" />
-      </ListItem>
-      <ListItem button>
-        <ListItemIcon>
-          <StarIcon />
-        </ListItemIcon>
-        <ListItemText primary="About" />
-      </ListItem>
-    </List>
   </div>
 )
 

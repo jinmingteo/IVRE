@@ -53,10 +53,26 @@ db.ref("/newCharts").on("value", data => {
   }
 });
 
+db.ref("/adminCharts").on("value", data => {
+  if (data.val()) {
+    store.dispatch({ type: "SET_ADMIN_VAL", payload: data.val() });
+    console.log("admin dispatched & displaying getstate:");
+    console.log(store.getState());
+  }
+});
+
 db.ref("/stuCharts").on("value", data => {
   if (data.val()) {
     store.dispatch({ type: "SET_STU_VAL", payload: data.val() });
     console.log("student dispatched & displaying getstate:");
+    console.log(store.getState());
+  }
+});
+
+db.ref("/insCharts").on("value", data => {
+  if (data.val()) {
+    store.dispatch({ type: "SET_INST_VAL", payload: data.val() });
+    console.log("instructor dispatched & displaying getstate:");
     console.log(store.getState());
   }
 });

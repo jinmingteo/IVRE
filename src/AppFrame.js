@@ -118,7 +118,7 @@ class AppFrame extends React.Component {
                 </IconButton>
               </Hidden>
               <Typography className={classes.appBarTitle} type="title" color="inherit" noWrap>
-                Firebase and Redux
+                <b><i> IVRE </i></b>
               </Typography>
               <IconButton
                 aria-label="More"
