@@ -45,6 +45,14 @@ db.ref("/").on("value", data => {
   }
 });
 
+db.ref("/questionanswer").on("value", data => {
+  if (data.val()) {
+    store.dispatch({ type: "SET_ANS_VAL", payload: data.val() });
+    console.log("QnA dispatched & displaying getstate:");
+    console.log(store.getState());
+  }
+});
+
 db.ref("/newCharts").on("value", data => {
   if (data.val()) {
     store.dispatch({ type: "SET_VAL", payload: data.val() });

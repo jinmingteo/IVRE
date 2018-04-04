@@ -14,8 +14,14 @@ const reducer = (state = {}, action) => {
       ...state,
       val: action.payload
       };
+      
+  case 'SET_ANS_VAL':
+    return {
+      ...state,
+      ansVal: action.payload
+      };
 
-case 'SET_ADMIN_VAL':
+  case 'SET_ADMIN_VAL':
     return {
       ...state,
       adminVal: action.payload
