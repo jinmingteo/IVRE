@@ -82,14 +82,15 @@ class RechartsComp extends React.Component {
           <h3>{this.props.charts.title}</h3>
           <PieChart width={800} height={400}>
             <Pie
+              isAnimationActive={false}
               data={this.props.charts.data}
               cx={200}
               cy={200}
-              innerRadius={70}
               outerRadius={90}
               fill="#82ca9d"
               label
             />
+            <Tooltip />
           </PieChart>
         </AppFrame>
       );
