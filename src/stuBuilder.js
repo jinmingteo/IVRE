@@ -1,6 +1,6 @@
 //import React from 'react';
 import { connect } from 'react-redux';
-import ChartComponent from './ChartComponent.js'
+import ChartComponent from './StuChartComponent.js'
 
 const mapStateToProps = state => {
   return {newCharts: state.stuVal};

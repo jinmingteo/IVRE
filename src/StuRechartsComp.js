@@ -44,13 +44,16 @@ const AxisLabel = ({
   );
 };
 
-export default class StuRecharts extends React.Component {
+class StuRechartsComp extends React.Component {
   render() {
     console.log("Props within Recharts:");
     console.log(this.props);
     if (this.props.charts.chartType === "line") {
       return (
         <AppFrame>
+          <h1> Hello, Chelsea </h1>
+          <h2> You have completed 368 levels. </h2>
+          <h2> You are rank 2. </h2>
           <h3>{this.props.charts.title}</h3>
           <LineChart width={400} height={400} data={this.props.charts.data}>
             <Line type="monotone" dataKey="y" stroke="#8884d8" />
@@ -82,14 +85,15 @@ export default class StuRecharts extends React.Component {
           <h3>{this.props.charts.title}</h3>
           <PieChart width={800} height={400}>
             <Pie
+              isAnimationActive={false}
               data={this.props.charts.data}
               cx={200}
               cy={200}
-              innerRadius={70}
               outerRadius={90}
               fill="#82ca9d"
               label
             />
+            <Tooltip />
           </PieChart>
         </AppFrame>
       );
@@ -160,3 +164,4 @@ export default class StuRecharts extends React.Component {
 //     mapStateToProps,
 // )(RechartsComp)
 
+export default StuRechartsComp;
