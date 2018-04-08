@@ -1,6 +1,6 @@
 import React from "react";
 import AppFrame from "./AppFrame";
-import { Treemap} from "recharts";
+import { Treemap, Tooltip} from "recharts";
 //import { BarChart, Bar } from "recharts";
 
 // const AxisLabel = ({
@@ -79,43 +79,6 @@ const CustomizedContent = React.createClass({
   }
 });
 
-const data = [
-          {
-            name: 'axis',
-            size: 1302,
-          },
-          {
-            name: 'controls',
-            children: [
-              { name: 'AnchorControl', size: 2138 },
-            ],
-          },
-          {
-            name: 'data',
-            children: [
-              { name: 'Data', size: 20544 },
-            ],
-          },
-          {
-            name: 'events',
-            children: [
-              { name: 'DataEvent', size: 7313 },
-            ],
-          },
-          {
-            name: 'legend',
-            children: [
-              { name: 'Legend', size: 20859 },
-            ],
-          },
-          {
-            name: 'operator',
-            children: [
-              
-              { name: 'IOperator', size: 1286 },
-            ],
-          }
-        ];
 
 export default class QuestionAnswer extends React.Component {
   render() {
@@ -133,6 +96,7 @@ export default class QuestionAnswer extends React.Component {
             fill="#8884d8"
             content={<CustomizedContent colors={COLORS}/>}
           >
+          <Tooltip/>
           </Treemap>
         </AppFrame>
       );

@@ -8,10 +8,12 @@ import StudentCharts from './StudentCharts'
 import InstruCharts from './InstructorCharts'
 import AdminCharts from './AdminCharts'
 import QuestionAnswer from './QuestionAnswerCharts'
+//import Leaderboard from './Leaderboard'
 //import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-
+//<Route path="/test" exact component={Leaderboard} />
 const Root=()=>(
     <Switch>
+    
     <Route path="/" exact component={App} />
     <Route path="/victory" exact component={Victory} />
     <Route path="/recharts" exact component={Recharts} />

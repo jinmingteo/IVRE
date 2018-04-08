@@ -1,0 +1,94 @@
+$text: #424242
+$highlight: #006400
+$light: #FEFEFE
+$table: #EDEDED
+$gray: #888
+
+
+
+
+body
+  font-family: "Lucida Console", Monaco, monospace
+  background: $light
+  
+  a
+    color: $highlight
+    
+.container.container-fluid
+  max-width: 800px
+  
+  
+  
+h1,.footer
+  padding: 10px 0 6px
+  text-align: center
+  margin: 0 0 10px
+  
+  background: $highlight
+  color: $light
+  
+  a
+    color: $light
+
+    &:hover
+      text-decoration: none
+    &:focus
+      outline: none
+      border: none
+.footer
+  margin-bottom: 0
+  padding-bottom: 20px
+    
+table.table
+  margin-bottom: 10px
+  
+tr
+  background: $table
+  border-top: 2px solid $light
+  
+  .btn.btn-primary
+    background: $highlight
+    
+    i.glyphicon
+      color: $light
+    
+    &:active
+      background: darken($highlight, 10%)
+  
+  i
+    color: $highlight
+    margin-top: 4px
+  
+  .rank
+    text-align: center
+    color: $light
+    background: $highlight
+    font-size: 30px
+    line-height: 3.3 !important
+  
+  img
+    width: 100px
+    border-radius: 2px
+    mix-blend-mode: multiply
+    
+  .userName
+    color: $light
+    background: $highlight
+    padding: 10px 20px
+    border-radius: 0 5px 5px 0
+    
+    
+  .score
+    text-align: center
+    font-size: 30px
+    line-height: 3.3 !important
+    color: $gray
+  
+  
+    
+.clickable
+  &:hover
+    cursor: pointer
+  
+.centered
+  text-align: center
