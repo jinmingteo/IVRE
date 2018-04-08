@@ -7,8 +7,8 @@ class App extends React.Component{
     return(
       <div>
       <AppFrame>
-      <h1> Welcome to Integrated Virtual Reviewing Environment (IVRE) </h1>
-      <h2><i> A platform for students and instructors to review their educational progress. </i></h2>
+      <h1> Integrated Virtual Reviewing Environment (IVRE) </h1>
+      <h3><i> A platform for students and instructors to review their educational progress. </i></h3>
 
       </AppFrame>
       </div>

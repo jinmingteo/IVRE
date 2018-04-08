@@ -34,6 +34,17 @@ export const DrawerMenuItems = (
     </List>
     <Divider />
     <List>
+      <Link className="linkStyle" to="/answermap">
+      <ListItem button>
+      <ListItemIcon>
+      <StarIcon />
+      </ListItemIcon>
+      <ListItemText primary="QnA map" />
+      </ListItem>
+      </Link>
+    </List>
+    <Divider />
+    <List>
       <Link className="linkStyle" to="/studentCharts">
       <ListItem button>
       <ListItemIcon>

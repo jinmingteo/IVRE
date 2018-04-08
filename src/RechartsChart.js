@@ -18,6 +18,8 @@ import { BarChart, Bar } from "recharts";
 //import { compose } from "redux";
 //import { connect } from "react-redux";
 
+const COLORS = ['#8889DD', '#9597E4', '#8DC77B', '#A5D297', '#E2CF45', '#F8C12D'];
+
 const AxisLabel = ({
   axisType,
   x = 0,
@@ -53,7 +55,7 @@ class RechartsComp extends React.Component {
         <AppFrame>
           <h3>{this.props.charts.title}</h3>
           <LineChart width={400} height={400} data={this.props.charts.data}>
-            <Line type="monotone" dataKey="y" stroke="#8884d8" />
+            <Line type="monotone" dataKey="y" stroke= "#009933" />
             <XAxis
               dataKey="x"
               label={
@@ -125,7 +127,7 @@ class RechartsComp extends React.Component {
             <CartesianGrid strokeDasharray="3 3" />
             <Tooltip />
             <Legend />
-            <Bar dataKey="y" fill="#8884d8" />
+            <Bar dataKey="y" fill="#6F9FD8" />
           </BarChart>
         </AppFrame>
       );
